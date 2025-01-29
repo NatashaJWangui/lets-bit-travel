@@ -11,6 +11,9 @@ module.exports = {
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
+      screens : {
+        '3xl': '1600px', // Adjust the size as per your design requirements
+      },
     },
   },
   plugins: [],
