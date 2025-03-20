@@ -10,13 +10,13 @@ export const navLinks = [
     offset:-50,
   },
   {
-    id: "listing",
-    title: "Listing",
+    id: "places",
+    title: "Places",
     offset:-50,
   },
   {
-    id: "testimonial",
-    title: "Testimonies",
+    id: "experience",
+    title: "Experiences",
     offset:-50,
   },
   {
