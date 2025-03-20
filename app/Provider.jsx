@@ -2,14 +2,30 @@ import React from 'react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import Hero from '@/components/Hero';
+import Feature from '@/components/Feature';
+import Bookings from '@/components/Bookings';
 
 function Provider({children}) {
   return (
-    <div>
-      {/* <Navbar/> */}
-      <Hero/>
+    <div className="flex flex-col min-h-screen">
+      <Navbar/>
+      <div id="home">
+        <Hero/>
+      </div>
+      <div id="bookings">
+        <Bookings/>
+      </div>
+      <div id="feature">
+        <Feature/>
+      </div>
+       {/* Add the other sections with their respective IDs */}
+      {/* <div id="places">...</div> */}
+      {/* <div id="experience">...</div> */}
+      {/* <div id="download">...</div> */}
       {/* <Footer/> */}
-      {children}
+      <main className="flex-grow">
+        {children}
+      </main>
     </div>
   )
 }

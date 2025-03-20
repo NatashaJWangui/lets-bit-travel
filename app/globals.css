@@ -1,11 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* Global reset */
+
+
 * {
-    @apply m-0 p-0 box-border;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto Slab', sans-serif;
     scroll-behavior: smooth;
+    color-scheme: white;
+  }
+.container {
+    min-height: 100vh;
 }
 
 /* Custom Styles */
@@ -90,6 +100,14 @@
         @apply medium-15 border border-green-800 bg-green-500 px-7 py-3 text-white transition-all hover:bg-green-950 rounded-full;
     }
 
+    .btn_secondary_mobile_rounded {
+        @apply medium-15 ml-6 border border-green-800 bg-green-900 px-7 py-3 text-white transition-all hover:text-green-500 rounded-full;
+    }
+
+    .btn_secondary_desktop_rounded {
+        @apply medium-15 border border-green-800 bg-green-700 px-7 py-3 text-white transition-all hover:bg-green-950 rounded-full;
+    }
+
     /* Containers */
     .max-container {
         @apply mx-auto max-w-[1440px];
@@ -100,7 +118,7 @@
     }
 
     .max_pad_container {
-        @apply mx-auto max-w-[1440px] px-6 lg:px-20 3xl:px-0;
+        @apply mx-auto px-6 lg:px-20 3xl:px-0;
     }
 
     /* Flex utilities */
