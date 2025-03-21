@@ -1,5 +1,6 @@
 import {Roboto_Slab} from "next/font/google";
 import "./globals.css";
+import 'react-multi-carousel/lib/styles.css';
 import Provider from "./Provider";
 
 const robotoSlab = Roboto_Slab({

@@ -2,7 +2,7 @@ import React from 'react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import Hero from '@/components/Hero';
-import Feature from '@/components/Feature';
+import Featured from '@/components/Featured';
 import Bookings from '@/components/Bookings';
 
 function Provider({children}) {
@@ -15,8 +15,8 @@ function Provider({children}) {
       <div id="bookings">
         <Bookings/>
       </div>
-      <div id="feature">
-        <Feature/>
+      <div id="featured">
+        <Featured/>
       </div>
        {/* Add the other sections with their respective IDs */}
       {/* <div id="places">...</div> */}

@@ -1,5 +1,4 @@
 import React from 'react'
-// import MapLayout from './MapLayout'
 
 function Hero() {
   return (
@@ -9,17 +8,12 @@ function Hero() {
       <video src={"/video.mp4"} muted autoPlay loop className='absolute h-full w-full top-0 bottom-0 object-cover'></video>
       
       {/* Content Container - adjusted padding for mobile */}
-      <div className='relative z-20 px-6 lg:px-20 3xl:px-0 mt-20'>
+      <div className='relative z-20 px-6 lg:px-20 3xl:px-0 mt-20 w-[95%] sm:w-[80%] h-full mx-auto'>
         {/* Heading Content - now positioned lower on mobile */}
         <div className='w-full text-white text-center mb-auto'>
-          <span className='uppercase text-[52px] md:text-[60px] font-[400] leading-[120%]'>Travelling always creates memories.</span>
-          <h2 className='text-[32px] leading-tight md:text-[36px] md:leading-[1.3] mb-4 font-semibold mt-2'>Let's travel the world together.</h2>
+          <span className='uppercase text-5xl md:text-6xl font-normal leading-[120%]'>Travelling always creates memories.</span>
+          <h2 className='text-2xl md:text-3xl leading-tight md:leading-[1.3] mb-4 font-semibold mt-2'>Let's travel the world together.</h2>
         </div>
-        
-        {/* Form content - with increased margin-top on mobile
-        <div className='w-full mt-16 sm:mt-12 lg:mt-24'>
-          <MapLayout/>
-        </div> */}
       </div>
     </section>
   )

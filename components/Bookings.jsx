@@ -118,10 +118,15 @@ function Bookings() {
   };
 
   return (
-    <section id="bookings" className="min-h-[400px] flex flex-col items-center">
+    <section id="bookings" className="min-h-[150px] w-[95%] mx-auto flex flex-col items-center mt-8 md:mt-10">
+      <div className="text-center mt-2 mb-4">
+        <span className=" text-green-700 text-3xl sm:text-3xl md:text-4xl lg:text-[40px] uppercase font-bold">
+          📍 Make a Booking Today! ✈️ 
+        </span>
+      </div>
       {/* Always render the heading */}
       <div className="text-center mt-6">
-        <span className="bg-green-700 text-white text-base md:text-xl uppercase py-4 px-6 rounded-xl md:py-4 md:px-12">
+        <span className="bg-green-700 text-white text-base md:text-xl uppercase py-4 px-6 rounded-2xl md:py-4 md:px-12">
           Book your next destination !!!
         </span>
       </div>
@@ -148,7 +153,7 @@ function Bookings() {
 
           <LoadScript googleMapsApiKey={process.env.NEXT_PUBLIC_GOOGLE_PLACE_API_KEY} libraries={libraries}>
             {/* Booking Form */}
-            <form onSubmit={handleSubmit} className={`flex flex-col md:flex-row gap-6 space-x-4 px-8 py-10 md:px-12 bg-green-700 rounded-xl relative transition-all duration-300 ${open ? "mb-20" : ""}`}>
+            <form onSubmit={handleSubmit} className={`flex flex-col md:flex-row gap-6 space-x-4 px-8 py-10 md:px-12 bg-green-700 rounded-2xl relative transition-all duration-300 ${open ? "mb-20" : ""}`}>
               {/* Location */}
               <div>
                 <label htmlFor="city" className="block text-white pb-2 uppercase text-lg text-center">
@@ -282,6 +287,19 @@ function Bookings() {
           </LoadScript>
         </>
       )}
+      {/* Simple Divider with Location Icon */}
+      <div className="w-full mt-16 relative">
+        {/* Simple Divider Line */}
+        <div className="w-full h-1 bg-gradient-to-r from-green-100 via-green-700 to-green-100"></div>
+        
+        {/* Centered Location Icon */}
+        <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white p-2 rounded-full">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#15803d" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+            <path d="M12 2a7 7 0 0 0-7 7c0 5 7 13 7 13s7-8 7-13a7 7 0 0 0-7-7Z"></path>
+            <circle cx="12" cy="9" r="2.5"></circle>
+          </svg>
+        </div>
+      </div>
     </section>
   );
 }

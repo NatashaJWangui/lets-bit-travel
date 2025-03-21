@@ -18,8 +18,8 @@ export const navLinks = [
     offset:-50,
   },
   {
-    id: "feature",
-    title: "Feature",
+    id: "featured",
+    title: "Featured",
     icon:FaUmbrellaBeach ,
     offset:-50,
   },
@@ -42,4 +42,48 @@ export const navLinks = [
     offset:-50,
 
   }
+];
+
+export const Feature = [
+  {
+    title:"Paris",
+    icon:"/paris.jpeg",
+    destinations: "4 places",
+  },
+  {
+    title:"Hongkong",
+    icon:"/hongkong.jpeg",
+    destinations: "3 places",
+  },
+  {
+    title:"Thailand",
+    icon:"/thailand.jpeg",
+    destinations: "7 places",
+  },
+  {
+    title:"Dubai",
+    icon:"/dubai.jpeg",
+    destinations: "2 places",
+  },
+  {
+    title:"Diani",
+    icon:"/diani.jpeg",
+    destinations: "5 places",
+  },
+  {
+    title:"Maasai Mara",
+    icon:"/maasaimara.jpeg",
+    destinations: "8 places",
+  },
+  {
+    title:"Maldives",
+    icon:"/maldives.jpeg",
+    destinations: "4 places",
+  },  
+  {
+    title:"Canada",
+    icon:"/canada.jpeg",
+    destinations: "3 places",
+  },
+
 ];

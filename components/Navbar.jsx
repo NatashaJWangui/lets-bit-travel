@@ -55,8 +55,8 @@ const Navbar = () => {
         </Link>
         <ul className='list-none hidden sm:flex flex-row gap-10'>
           {navLinks.map((nav) => (
-            <li key={nav.id} className={`${ active === nav.title ? "text-black" : scrolled ? "text-white" : "text-green-500"
-              } hover:text-green-950 text-[25px] font-medium cursor-pointer`}
+            <li key={nav.id} className={`${ active === nav.title ? "text-green-500" : scrolled ? "text-white" : "text-green-500"
+              } hover:text-green-500 text-[25px] font-medium cursor-pointer`}
               onClick={() => setActive(nav.title)}
             >
               <a href={`#${nav.id}`}>{nav.title}</a>
