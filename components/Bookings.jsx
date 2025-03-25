@@ -82,6 +82,10 @@ function Bookings() {
     }
   };
 
+  const handleCheckOutChange = (e) => {
+    setCheckOut(e.target.value); // No need for extra validation, useEffect handles it
+  };
+
   // Handle form submission
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -194,7 +198,7 @@ function Bookings() {
                 <input 
                   type="date" 
                   value={checkOut} 
-                  onChange={(e) => setCheckOut(e.target.value)}
+                  onChange={handleCheckOutChange}
                   min={checkIn || new Date().toISOString().split('T')[0]}
                   className={`border ${dateError ? 'border-red-500' : 'border-white'} rounded-xl p-2 w-full bg-transparent text-white`} 
                   required
@@ -208,7 +212,7 @@ function Bookings() {
                 <div className="flex items-center border border-white rounded-xl p-2 cursor-pointer bg-transparent text-white" onClick={() => setOpen(!open)}>
                   <MdPerson className="text-white w-6 h-6 mr-2" />
                   <span className="text-white text-base">{adults} Adults, {children} Children, {rooms} Rooms</span>
-                  <MdExpandMore className="ml-auto text-white" />
+                  <MdExpandMore className="ml-auto text-white w-7 h-7" />
                 </div>
 
                 {/* Dropdown Menu */}
