@@ -2,6 +2,7 @@ import {Roboto_Slab} from "next/font/google";
 import "./globals.css";
 import 'react-multi-carousel/lib/styles.css';
 import Provider from "./Provider";
+import "react-toastify/dist/ReactToastify.css";
 
 const robotoSlab = Roboto_Slab({
   subsets: ["latin"],

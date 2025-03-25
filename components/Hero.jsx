@@ -4,6 +4,7 @@ import React, { useState, useEffect } from 'react';
 function Hero() {
   const [showOverlay, setShowOverlay] = useState(false);
 
+  
   useEffect(() => {
     const timer = setTimeout(() => {
       setShowOverlay(true);
