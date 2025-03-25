@@ -104,7 +104,7 @@ const Navbar = () => {
                       <a href={`#${nav.id}`}>{nav.title}</a>
                     </li>
                   ))}
-                  <button className="ml-6 flex items-center border border-green-800 bg-green-900 px-7 py-3 text-white transition-all hover:text-green-500 rounded-full text-base uppercase">
+                  <button className="ml-6 flex items-center border border-green-800 bg-gradient-to-br from-green-900 via-green-600 to-green-900 px-7 py-3 text-white transition-all hover:from-green-950 hover:via-green-700 hover:to-green-950 rounded-full text-base uppercase">
                     <FaUser className="text-white w-6 h-6 mr-2"/>
                     Login
                   </button>
@@ -119,12 +119,12 @@ const Navbar = () => {
            </div>
           )}
         </div>
-        <div className="hidden lg:block">
-          <button className="flex items-center border border-green-800 bg-green-700 px-5 py-3 text-white transition-all hover:bg-green-950 hover:text-green-500 rounded-full text-base uppercase">
-            <FaUser className="text-white w-6 h-6 mr-2 hover:text-green-500"/>
-            Login
-          </button>   
-        </div>   
+        <div className="hidden lg:block"> 
+          <button className="flex items-center border border-green-800 bg-gradient-to-br from-green-900 via-green-600 to-green-900 px-5 py-3 text-white transition-all hover:from-green-950 hover:via-green-700 hover:to-green-950 rounded-full text-base uppercase"> 
+            <FaUser className="text-white w-6 h-6 mr-2"/> 
+            Login 
+          </button>    
+        </div>
       </div>
     </nav>
   );
