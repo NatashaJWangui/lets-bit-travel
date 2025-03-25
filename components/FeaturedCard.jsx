@@ -6,8 +6,10 @@ function FeaturedCard({title, icon, destinations,width=600, height=600}) {
   
   return (
     <div className='mx-4 overflow-hidden group rounded-xl '>
-      <Link href="/" className='overflow-hidden relative'>
-        <Image src={icon} alt="Featured Image" width={width} height={height} loading='lazy' className='hover:scale-105 transition-all duration-700 overflow-hidden'/>
+      <Link href="/" className='overflow-hidden relative block'>
+        <div className="w-full h-[600px] overflow-hidden">
+          <Image src={icon} alt="Featured Image" width={width} height={height} loading='lazy' className='hover:scale-105 transition-all duration-700 w-full h-full object-cover'/>
+        </div>
         {/* Dark overlay */}
         {/* <div className='absolute inset-0 bg-black bg-opacity-30 rounded-xl'></div> */}
         {/* Title */}

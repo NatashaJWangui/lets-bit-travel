@@ -4,6 +4,7 @@ import Footer from '@/components/Footer';
 import Hero from '@/components/Hero';
 import Featured from '@/components/Featured';
 import Bookings from '@/components/Bookings';
+import Places from '@/components/Places';
 
 function Provider({children}) {
   return (
@@ -18,6 +19,10 @@ function Provider({children}) {
       <div id="featured">
         <Featured/>
       </div>
+      <div id="places">
+        <Places/>
+      </div>
+      
        {/* Add the other sections with their respective IDs */}
       {/* <div id="places">...</div> */}
       {/* <div id="experience">...</div> */}

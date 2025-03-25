@@ -37,7 +37,7 @@ const Navbar = () => {
   }, []);
 
   return (
-    <nav ref={navRef} className={`${styles.paddingX} w-full flex items-center py-5 fixed top-0 z-50 ${scrolled ? "bg-green-700" : "bg-transparent"}`}
+    <nav ref={navRef} className={`${styles.paddingX} w-full flex items-center py-3 fixed top-0 z-50 ${scrolled ? "bg-green-700" : "bg-transparent"}`}
     >
       {/* Desktop Navigation */}
       <div className='w-full flex justify-between items-center max-w-7xl mx-auto'>
@@ -51,12 +51,12 @@ const Navbar = () => {
             setToggle(false); // Close the mobile nav when clicked
           }}
         >
-          <img src="/mylogo.png" alt='logo' height={59} width={93} className='object-contain bg-transparent'/>
+          <img src="/mylogo.png" alt='logo' height={39} width={63} className='object-contain bg-transparent'/>
         </Link>
         <ul className='list-none hidden sm:flex flex-row gap-10'>
           {navLinks.map((nav) => (
             <li key={nav.id} className={`${ active === nav.title ? "text-green-500" : scrolled ? "text-white" : "text-green-500"
-              } hover:text-green-500 text-[25px] font-medium cursor-pointer`}
+              } hover:text-green-500 text-[20px] font-medium cursor-pointer`}
               onClick={() => setActive(nav.title)}
             >
               <a href={`#${nav.id}`}>{nav.title}</a>
@@ -69,7 +69,7 @@ const Navbar = () => {
           {!toggle && (
             <RiMenuUnfoldFill
               alt='menu'
-              className="w-10 h-10 object-contain text-white cursor-pointer"
+              className="w-8 h-8 object-contain text-white cursor-pointer hover:text-green-500"
               onClick={() => setToggle(true)} // Open mobile nav
             />
           )}
@@ -88,12 +88,12 @@ const Navbar = () => {
                     setToggle(false); // Close the mobile nav when clicked
                   }}
                 >
-                  <img src="/mylogo.png" alt='logo' height={49} width={83} className='object-contain ml-6'/>
+                  <img src="/mylogo.png" alt='logo' height={39} width={63} className='object-contain ml-6'/>
                 </Link>
                 <ul className='relative flex items-start flex-1 flex-col gap-8'>
                   {navLinks.map((nav) => (
-                    <li key={nav.id} className={`ml-8 flex gap-4 font-normal cursor-pointer text-[20px] hover:text-green-950 ${
-                        active === nav.title ? "text-black" : "text-white"
+                    <li key={nav.id} className={`ml-8 flex gap-4 font-normal cursor-pointer text-xl hover:text-green-500 ${
+                        active === nav.title ? "text-green-500" : "text-white"
                       }`}
                       onClick={(e) => {
                         e.stopPropagation(); // Prevent click from bubbling up to the parent div
@@ -112,7 +112,7 @@ const Navbar = () => {
                 {/* Close tag */}
                 <AiOutlineClose 
                   alt="close"
-                  className="w-10 h-10 object-contain text-white lg:hidden cursor-pointer absolute top-[0.7rem] right-[1.4rem]"
+                  className="w-10 h-10 object-contain text-white lg:hidden cursor-pointer absolute top-[0.7rem] right-[1.4rem] hover:text-green-500"
                   onClick={() => setToggle(false)} // Close the nav
                 />
               </div>
@@ -120,8 +120,8 @@ const Navbar = () => {
           )}
         </div>
         <div className="hidden lg:block">
-          <button className="flex items-center border border-green-800 bg-green-700 px-7 py-3 text-white transition-all hover:bg-green-950 rounded-full text-base uppercase">
-            <FaUser className="text-white w-6 h-6 mr-2"/>
+          <button className="flex items-center border border-green-800 bg-green-700 px-5 py-3 text-white transition-all hover:bg-green-950 hover:text-green-500 rounded-full text-base uppercase">
+            <FaUser className="text-white w-6 h-6 mr-2 hover:text-green-500"/>
             Login
           </button>   
         </div>   

@@ -277,9 +277,9 @@ function Bookings() {
               <div className="col-span-2 text-center mt-6">
                 <button 
                   type="submit"
-                  className="border border-white bg-green-700 px-7 py-3 text-white transition-all hover:bg-green-950 rounded-full text-base flex items-center"
+                  className="border border-white bg-green-700 px-7 py-3 text-white transition-all hover:bg-green-950 hover:text-green-500 rounded-full text-base flex items-center"
                 >
-                  <FaSearchLocation className="text-white w-6 h-6 mr-2" />
+                  <FaSearchLocation className="text-white w-6 h-6 mr-2 hover:text-green-500" />
                   Search
                 </button>
               </div>
