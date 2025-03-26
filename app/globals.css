@@ -12,7 +12,6 @@
     box-sizing: border-box;
     font-family: 'Roboto Slab', sans-serif;
     scroll-behavior: smooth;
-    color-scheme: white;
   }
 .container {
     min-height: 100vh;

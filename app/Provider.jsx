@@ -5,6 +5,7 @@ import Hero from '@/components/Hero';
 import Featured from '@/components/Featured';
 import Bookings from '@/components/Bookings';
 import Places from '@/components/Places';
+import Experiences from '@/components/Experiences';
 
 function Provider({children}) {
   return (
@@ -21,6 +22,9 @@ function Provider({children}) {
       </div>
       <div id="places">
         <Places/>
+      </div>
+      <div id="experiences">
+        <Experiences/>
       </div>
       
        {/* Add the other sections with their respective IDs */}
