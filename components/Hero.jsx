@@ -17,8 +17,8 @@ function Hero() {
     <section className='w-full min-h-screen relative overflow-hidden flex items-center justify-center'>
       {/* Background video and overlay */}
       <div className={`absolute w-full h-full bg-black top-0 bottom-0 z-10 transition-opacity duration-1000 ease-in-out pointer-events-none 
-        ${showOverlay ? "bg-opacity-30 md:bg-opacity-20" : "opacity-0"}`}
-      ></div>
+        ${showOverlay ? "bg-opacity-30 md:bg-opacity-20" : "opacity-0"}`}>
+      </div>
       <video muted autoPlay loop playsInline preload="auto" className="absolute h-full w-full top-0 bottom-0 object-cover">
         <source src="/video.mp4" type="video/mp4" />
       </video>
