@@ -56,7 +56,7 @@ Travel
 ```sh
 # Clone the repository
 git clone https://github.com/NatashaJWangui/lets-bit-travel.git
-cd travel
+cd Travel
 
 # Install frontend dependencies
 cd frontend
