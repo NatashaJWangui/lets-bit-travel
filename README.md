@@ -27,11 +27,11 @@ The Let's Bit Travel App is a web application designed to help users discover an
 
 ## Project Structure
 ```
-travel-app
+Travel
 ├── frontend
+│   ├── app
 │   ├── components
-│   ├── pages
-│   ├── styles
+│   ├── constants
 │   ├── utils
 │   ├── public
 │   ├── README.md
@@ -91,6 +91,5 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 ## Project Status
 
 - Current status: **Active**
-- Development is ongoing with future plans for API enhancements and additional features.
 
 ---
