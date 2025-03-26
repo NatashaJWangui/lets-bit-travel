@@ -19,8 +19,10 @@ function Hero() {
       <div className={`absolute w-full h-full bg-black top-0 bottom-0 z-10 transition-opacity duration-1000 ease-in-out pointer-events-none 
         ${showOverlay ? "bg-opacity-30 md:bg-opacity-20" : "opacity-0"}`}
       ></div>
-      <video src="/video.mp4" muted autoPlay loop className='absolute h-full w-full top-0 bottom-0 object-cover'/>
-      
+      <video muted autoPlay loop playsInline preload="auto" className="absolute h-full w-full top-0 bottom-0 object-cover">
+        <source src="/video.mp4" type="video/mp4" />
+      </video>
+  
       {/* Content Container - adjusted padding for mobile */}
       <div className='relative z-20 px-6 lg:px-20 3xl:px-0 mt-20 w-[95%] sm:w-[80%] h-full mx-auto'>
         {/* Heading Content - now positioned lower on mobile */}
