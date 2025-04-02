@@ -6,6 +6,9 @@ import Featured from '@/components/Featured';
 import Bookings from '@/components/Bookings';
 import Places from '@/components/Places';
 import Experiences from '@/components/Experiences';
+import Downloads from '@/components/Downloads';
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 function Provider({children}) {
   return (
@@ -26,6 +29,9 @@ function Provider({children}) {
       <div id="experiences">
         <Experiences/>
       </div>
+      <div id="downloads">
+        <Downloads/>
+      </div>
       
        {/* Add the other sections with their respective IDs */}
       {/* <div id="places">...</div> */}
@@ -35,6 +41,22 @@ function Provider({children}) {
       <main className="flex-grow">
         {children}
       </main>
+
+      {/* ✅ Global Toast Notifications */}
+      {/* ✅ Global ToastContainer but ensuring visibility */}
+      <ToastContainer 
+        position="top-right" 
+        autoClose={3000} 
+        className="toast-container"
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        style={{ zIndex: 9999 }}
+      />
     </div>
   )
 }

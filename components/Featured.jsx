@@ -1,8 +1,21 @@
 'use client'
-import React from 'react'
+import React , { useState, useEffect} from 'react'
 import FeaturedSlider from './FeaturedSlider'
+import Spinner from './Spinner'
 
 function Featured() {
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
+
+  // Simulating an async data fetch with useEffect
+  useEffect(() => {
+    // Simulating a delay to show the loading spinner
+    setTimeout(() => {
+    // Set loading to false after 3 seconds (simulate data fetch)
+      setLoading(false);
+    }, 3000); // 3 seconds delay
+  }, []);
+
   return (
     <section id="featured" className='mx-auto px-6 lg:px-20 3xl:px-0 py-20 xl:py-32 flex flex-col items-center justify-center'>
       <div className='w-[95%] mx-auto'>
@@ -14,10 +27,23 @@ function Featured() {
             🌍 Explore breathtaking destinations handpicked just for you! ✈️ From serene beaches 🏝️ to vibrant cityscapes 🌆, we bring you the best places to visit, making every journey unforgettable. 🌟
           </p>
         </div>
-        {/* Feature Slider */}
-        <div className='pt-12'>
-          <FeaturedSlider/>
-        </div>
+
+        {/* Loading Spinner */}
+        {loading ? (
+          <div className="flex justify-center items-center mt-8">
+            <Spinner /> {/* Show the spinner while loading */}
+          </div>
+        ) : error ? (
+          // Display error message if fetching failed
+          <div className="text-center text-red-600 mt-4">
+            <p>Error: {error}</p>
+          </div>
+        ) : (
+          //Feature Slider
+          <div className='pt-12'>
+            <FeaturedSlider/>
+          </div>
+        )}
       </div>
       
       {/* Simple Divider with Airplane Icon */}

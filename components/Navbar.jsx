@@ -6,8 +6,8 @@ import { navLinks } from "@/constants/index";
 import { RiMenuUnfoldFill } from "react-icons/ri";
 import { AiOutlineClose } from "react-icons/ai";
 import { FaUser } from "react-icons/fa";
-import { ToastContainer, toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css"; 
+import { toast } from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css';
 
 
 const Navbar = () => {
@@ -45,9 +45,7 @@ const Navbar = () => {
   };
 
   return (
-    <>
-      <nav ref={navRef} className={`${styles.paddingX} w-full flex items-center py-3 fixed top-0 z-50 ${scrolled ? "bg-green-700" : "bg-transparent"}`}
-      >
+    <nav ref={navRef} className={`${styles.paddingX} w-full flex items-center py-3 fixed top-0 z-50 ${scrolled ? "bg-green-700" : "bg-transparent"}`}>
         {/* Desktop Navigation */}
         <div className='w-full flex justify-between items-center max-w-7xl mx-auto'>
           <Link
@@ -136,19 +134,6 @@ const Navbar = () => {
           </div>
         </div>
       </nav>
-
-      <ToastContainer 
-        position="top-right"
-        autoClose={3000}
-        hideProgressBar={false}
-        newestOnTop={false}
-        closeOnClick
-        rtl={false}
-        pauseOnFocusLoss
-        draggable
-        pauseOnHover
-      />
-    </>
   );
 };
 

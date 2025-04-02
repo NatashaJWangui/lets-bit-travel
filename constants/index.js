@@ -37,14 +37,14 @@ export const navLinks = [
   },
   {
     id: "downloads",
-    title: "Downloads",
+    title: "Download App",
     icon:PiDownloadSimpleBold,
     offset:-50,
 
   }
 ];
 
-export const Feature = [
+export const Feature = [ 
   {
     title:"Paris",
     icon:"/paris.jpeg",

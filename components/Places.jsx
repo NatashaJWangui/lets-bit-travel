@@ -1,11 +1,26 @@
-import React from 'react'
+'use client'
+import React , { useState, useEffect} from 'react'
 import PlacesCard from './PlacesCard'
 import { Place } from '@/constants'
+import Spinner from './Spinner'
 
 function Places() {
+
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
+
+  // Simulating an async data fetch with useEffect
+  useEffect(() => {
+    // Simulating a delay to show the loading spinner
+    setTimeout(() => {
+      // Set loading to false after 3 seconds (simulate data fetch)
+      setLoading(false);
+    }, 3000); // 3 seconds delay
+  }, []);
+
   return (
-    <section id="places" className='mx-auto px-6 lg:px-20 3xl:px-0 py-6 xl:py-4'>
-      <div className='w-[95%] mx-auto'>
+    <section id="places" className='min-h-[150px] w-[95%] mx-auto px-6 lg:px-20 3xl:px-0 py-6 xl:py-4'>
+      <div className=''>
         {/* Places Heading */}
         <div className="mx-4">
           <h1 className='text-black uppercase text-xl md:text-2xl text-center font-bold'>Discover Your Next Stay</h1>
@@ -15,12 +30,25 @@ function Places() {
             Whether you're looking for a peaceful getaway 🏞️ or a vibrant urban experience, we&apos;ve got you covered! 🛏️🚪  
           </p>
         </div>
-        {/* Places Card */}
-        <div className='pt-12 grid lg:grid-cols-3 2xl:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-8 py-12'>
-          {Place.map((place, index) => (
-            <PlacesCard key={index} place={place} />
-          ))}
-        </div>
+
+        {/* Loading Spinner */}
+        {loading ? (
+          <div className="flex justify-center items-center mt-8">
+            <Spinner /> {/* Show the spinner while loading */}
+          </div>
+        ) : error ? (
+          // Display error message if fetching failed
+          <div className="text-center text-red-600 mt-4">
+            <p>Error: {error}</p>
+          </div>
+        ) : (
+          // Places Card
+          <div className='pt-12 grid lg:grid-cols-3 2xl:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-8 py-12'>
+            {Place.map((place, index) => (
+              <PlacesCard key={index} place={place} />
+            ))}
+          </div>
+        )}
       </div>
 
       {/* Simple Divider with Home Icon */}

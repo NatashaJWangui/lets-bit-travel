@@ -13,7 +13,7 @@ function FeaturedSlider() {
   };
     
   return (
-    <div>
+    <div className="relative z-10">
       <Carousel arrows={true} autoPlay={true} autoPlaySpeed={5000} infinite responsive={responsive}>
         {Feature.map((featured, index) => (
           <FeaturedCard key={index} {...featured} />
