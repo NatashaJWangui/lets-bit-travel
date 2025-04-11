@@ -53,7 +53,7 @@ function Footer() {
             <img src="/mylogo.png" alt="footer logo" height={39} width={63} className="object-contain bg-transparent" />
           </Link>
           <p className="text-white mt-6 text-lg text-center md:text-start lg:text-start xl:text-start 2xl:text-start">
-            <span>Adventure is calling.</span>
+            <span>Adventure is calling 🏔️</span>
             <br />
             <span>Let’s Bit Travel 🌍</span>
           </p>
@@ -62,7 +62,7 @@ function Footer() {
         {/* Navigation links */}
         <div className="md:mx-auto">
           <h1 className="text-gray-300 text-lg font-bold mb-4 underline text-center">Quick Links</h1>
-          <div className="text-center space-y-4">
+          <div className="text-center space-y-2">
             <Link href="/contact-us" className="text-white text-lg hover:text-green-500">Contact Us</Link>
             <br />
             <Link href="/about-us" className="text-white text-lg hover:text-green-500">About Us</Link>

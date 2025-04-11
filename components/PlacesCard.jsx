@@ -10,10 +10,12 @@ import { FaStarHalfAlt } from "react-icons/fa";
 function PlacesCard({ place, width = 300, height = 300 }) {
   return (
     <div className='overflow-hidden rounded-tl-xl rounded-tr-xl border border-slate-200 group transition-transform duration-300 ease-in-out transform hover:scale-105'>
-      <Link href="/" className='overflow-hidden relative'>
-        <Image src={place.icon} alt={place.title} width={width} height={height} loading='lazy' className="w-full h-[300px] object-cover"/>
-        <span className='font-bold text-base text-white bg-green-700 hover:bg-green-950 absolute bottom-0 right-1/2 translate-x-1/2 translate-y-1/2 px-8 py-2 rounded-full group-hover:bg-green-950'>{place.price}</span>
-      </Link>
+      <div className='relative'>
+        <Link href="/" className='overflow-hidden block'>
+          <Image src={place.icon} alt={place.title} width={width} height={height} loading='lazy' className="w-full h-[300px] object-cover"/>
+          <span className='font-bold text-base text-white bg-green-700 hover:bg-green-950 absolute top-4 left-4 px-6 py-2 rounded-full group-hover:bg-green-950'>{place.price}</span>
+        </Link>
+      </div>
       <div className='p-4 mt-6 md:mt-4'>
         <div className='capitalize text-2xl font-semibold'>
           <span>{place.title}</span>
