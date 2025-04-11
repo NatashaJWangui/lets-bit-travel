@@ -10,7 +10,7 @@ import { toast } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
 
 
-const Navbar = () => {
+function Navbar() {
   const navRef = useRef(null);
   const [active, setActive] = useState("");
   const [toggle, setToggle] = useState(false);

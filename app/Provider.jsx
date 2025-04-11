@@ -37,7 +37,7 @@ function Provider({children}) {
       {/* <div id="places">...</div> */}
       {/* <div id="experience">...</div> */}
       {/* <div id="download">...</div> */}
-      {/* <Footer/> */}
+      <Footer/>
       <main className="flex-grow">
         {children}
       </main>
