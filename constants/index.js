@@ -40,7 +40,6 @@ export const navLinks = [
     title: "Download App",
     icon:PiDownloadSimpleBold,
     offset:-50,
-
   }
 ];
 
@@ -85,7 +84,6 @@ export const Feature = [
     icon:"/canada.jpeg",
     destinations: "3 places",
   },
-
 ];
 
 export const Place = [
